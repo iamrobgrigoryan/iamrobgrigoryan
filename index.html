@@ -1092,7 +1092,8 @@
                         <h3>Get in <span>Touch</span></h3>
                       </div>
                       <!-- Google Map -->
-                      <div id="map" class="map"></div>
+                      <!-- <div id="map" class="map"></div> -->
+                    <!-- </div> -->
                       <!-- End of Google Map -->
 
                       <div class="contact-info-block">
@@ -1134,7 +1135,7 @@
                       <div class="block-title">
                         <h3>Contact <span>Form</span></h3>
                       </div>
-                      <form method="post" action="https://formspree.io/f/xjvjvokq"> <!-- id="contact-form" -->
+                      <form id="demo-form" method="post" action="https://formspree.io/f/xjvjvokq"> <!-- id="contact-form" -->
 
                         <div class="messages"></div>
 
@@ -1164,9 +1165,19 @@
                           </div>
 
                           <!-- <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI"></div> -->
-                          <div class="g-recaptcha" data-sitekey="6LeHjp8aAAAAAKivJxM7cTJWbjJ9yQUypSQmeBi2"></div>
+                           <script>
+                            function onSubmit(token) {
+                            document.getElementById("demo-form").submit();
+                            }
+                          </script>
 
-                          <input type="submit" class="button btn-send" value="Send message">
+                          <!-- <input type="submit" class="button btn-send" value="Send message"> -->
+                          <div class="button btn-send">
+                          <button class="g-recaptcha" 
+                            data-sitekey="6LeHjp8aAAAAAKivJxM7cTJWbjJ9yQUypSQmeBi2" 
+                            data-callback='onSubmit' 
+                            data-action='submit'>Submit</button>
+                            </div>
                         </div>
                       </form>
                     </div>
@@ -1222,9 +1233,9 @@
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script>
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script> -->
     <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script> -->
-    <script type="text/javascript" src="js/jquery.googlemap.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery.googlemap.js"></script> -->
     <script type="text/javascript" src="js/main.js"></script>
 
     <!-- Demo Color changer Script -->
